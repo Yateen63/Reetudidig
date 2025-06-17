@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love You Pagli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+    }
+
+    .main {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 3;
+      background: linear-gradient(135deg, #ffc0cb, #ff99cc);
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      font-size: 14px;
+      border-radius: 30px;
+      box-shadow: 0 0 10px #ff69b4;
+      cursor: pointer;
+      animation: popIn 1s ease;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      transform: scale(1.05);
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+      animation: zoomIn 1.2s ease forwards;
+    }
+
+    @keyframes zoomIn {
+      0% { opacity: 0; transform: scale(0.7); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .love-message {
+      margin-top: 25px;
+      font-family: 'Sacramento', cursive;
+      font-size: 30px;
+      color: #ff1493;
+      text-shadow: 0 0 6px #ff69b4, 0 0 12px #ffc0cb;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .music-button {
+      margin-top: 25px;
+      background: linear-gradient(135deg, #ff4da6, #ff99cc);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      font-size: 16px;
+      border-radius: 50px;
+      box-shadow: 0 0 12px #ff4da6;
+      cursor: pointer;
+      animation: popIn 1s ease-in-out forwards;
+      transition: all 0.3s ease;
+    }
+
+    .music-button:hover {
+      background: linear-gradient(135deg, #ff1a8c, #ff66b3);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff1a8c;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media screen and (min-width: 768px) {
+      .love-message { font-size: 40px; }
+      .image-container img { max-width: 400px; }
+    }
+
+    /* Heart & Sparkle Animation */
+    .heart, .sparkle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    .heart {
+      background-color: #ff69b4;
+      transform: rotate(45deg);
+      animation: floatHearts 8s linear infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff69b4;
+      border-radius: 50%;
+    }
+
+    .heart::before { top: -10px; left: 0; }
+    .heart::after { left: -10px; top: 0; }
+
+    @keyframes floatHearts {
+      0% { transform: translateY(100vh) rotate(45deg) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(45deg) scale(1.2); opacity: 0; }
+    }
+
+    .sparkle {
+      background: radial-gradient(circle, #fffacd 10%, transparent 60%);
+      border-radius: 50%;
+      animation: floatSparkles 10s linear infinite;
+    }
+
+    @keyframes floatSparkles {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heart + Sparkle Animations -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      const h = document.createElement('div');
+      h.className = 'heart';
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.animationDuration = 5 + Math.random() * 5 + 's';
+      h.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(h);
+    }
+
+    for (let i = 0; i < 15; i++) {
+      const s = document.createElement('div');
+      s.className = 'sparkle';
+      s.style.left = Math.random() * 100 + 'vw';
+      s.style.animationDuration = 4 + Math.random() * 6 + 's';
+      s.style.animationDelay = Math.random() * 5 + 's';
+      s.style.width = s.style.height = (5 + Math.random() * 8) + 'px';
+      document.body.appendChild(s);
+    }
+  </script>
+
+  <!-- Back Button -->
+  <a href="Page2.html"><button class="back-button">⬅️ Back</button></a>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="image-container">
+      <img src="https://i.postimg.cc/SR0V8n3S/In-Shot-20250617-202710188.jpg" alt="Pagli">
+    </div>
+
+    <div class="love-message">
+      💖 happy birthday once again didi and thankyou apne mujhpe trust kiya 💖
+    </div>
+
+    <button class="music-button" onclick="document.getElementById('bg-music').play()">🎵 Play Song</button>
+    <audio id="bg-music" src="https://files.catbox.moe/y0p0n7.mp3" preload="auto"></audio>
+  </div>
+
+</body>
+</html>

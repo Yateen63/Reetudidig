@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Reetu Didi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://i.postimg.cc/rwvmph2R/ce75ac1a5f6f9c6144849009717322dd.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      color: #e0ffff;
+    }
+
+    .main-wrapper {
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 34px;
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      color: #ff6ec7;
+      text-shadow: 0 0 10px #ff69b4, 0 0 16px #ffb6c1;
+    }
+
+    .message-box {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 18px;
+      border-radius: 18px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 20px rgba(0,255,255,0.15);
+      text-align: center;
+    }
+
+    .message-box p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #ffffff;
+      text-shadow: 0 0 3px #ffccff;
+    }
+
+    .signature {
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #ffe5f9;
+      text-shadow: 0 0 4px #ffb6c1;
+    }
+
+    .countdown {
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #baffff;
+      text-shadow: 0 0 4px #00ffff;
+    }
+
+    .button-container {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .music-button,
+    .more-button {
+      background: linear-gradient(135deg, #ff4da6, #ff99cc);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      font-size: 16px;
+      border-radius: 50px;
+      box-shadow: 0 0 12px #ff4da6;
+      cursor: pointer;
+      animation: popIn 1s ease-in-out forwards;
+      transition: all 0.3s ease;
+    }
+
+    .music-button:hover,
+    .more-button:hover {
+      background: linear-gradient(135deg, #ff1a8c, #ff66b3);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff1a8c;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff69b4;
+      transform: rotate(45deg);
+      animation: floatHearts 8s linear infinite;
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff69b4;
+      border-radius: 50%;
+    }
+
+    .heart::before { top: -10px; left: 0; }
+    .heart::after { left: -10px; top: 0; }
+
+    @keyframes floatHearts {
+      0% { transform: translateY(100vh) rotate(45deg) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(45deg) scale(1.2); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-wrapper">
+    <h1>🎉 Happy Birthday meri pyari Didi g 💕</h1>
+
+    <div class="message-box">
+      <p>
+        Aaj 21 June h ye apka hi din h me chahta hu ki apki life bhut sari khushiyon se bhar jae.<br><br>
+        Meri kismat hamesha kharab rehti h lekin usne mujhe appse milwaya.<br>
+        Anjan bn ke mile the or ajj app mere khass ho chuke ho.<br><br>
+        Na jane mene or apne ab tk kitni bate share ki or aage bhi ni janta ki kb tak ye bate or chelgi.<br>
+        Meri kismat me mene har favourite ya khass chij hamesha khoii hai. Mujhse nhi sha jata yarr.<br><br>
+        Ab app hi meri khass ho or ab me apko nhi khona chahta.<br>
+        Ek question h apke liye — kya app mere sath hamesha rahoge?<br><br>
+        Mere liye app bhuutttttttt hi jyada important ho.<br>
+        Apko phoolon 🌼 se bhut ache lgte hai lekin apko kon batae ki meri 👀 nazariya se dekho to tum bhi ek phool 🌼 ho<br>
+        jisse me kbhi todna nhi chahunga.<br><br>
+        Bs yarr itne sbd kaffi h 😄 Love you pagli 🤭
+      </p>
+      <div class="signature">Apka प्रिय bandar 🐒<br>(Yateen Don)</div>
+      <div class="countdown" id="cd">Loading countdown...</div>
+    </div>
+
+    <div class="button-container">
+      <button class="music-button" onclick="document.getElementById('bg-music').play()">🎵 Play Song</button>
+      <a href="page3.html"><button class="more-button">✨ Click here to more</button></a>
+    </div>
+  </div>
+
+  <audio id="bg-music" src="https://files.catbox.moe/u84k14.mp3" preload="auto"></audio>
+
+  <script>
+    const cdEl = document.getElementById('cd');
+    function updateCountdown(){
+      const now = new Date();
+      const nextB = new Date(now.getFullYear(), 5, 21, 0, 0, 0);
+      if(now > nextB) nextB.setFullYear(nextB.getFullYear() + 1);
+      const d = nextB - now;
+      const days = Math.floor(d / 864e5);
+      const hrs = Math.floor(d % 864e5 / 36e5);
+      const mins = Math.floor(d % 36e5 / 6e4);
+      const secs = Math.floor(d % 6e4 / 1000);
+      cdEl.textContent = `🎂 In ${days}d ${hrs}h ${mins}m ${secs}s until your special day!`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    for(let i = 0; i < 30; i++){
+      const h = document.createElement('div');
+      h.className = 'heart';
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.animationDuration = 5 + Math.random() * 5 + 's';
+      h.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(h);
+    }
+  </script>
+
+</body>
+</html>

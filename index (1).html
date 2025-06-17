@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kawaii Click Button</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://i.postimg.cc/1XTs4tVc/4738eab522b075cbb78582c82cd92019.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Comic Neue', cursive;
+    }
+
+    .kawaii-btn {
+      padding: 14px 36px;
+      font-size: 20px;
+      color: #ff69b4;
+      background-color: #fff0f5;
+      border: 2px dashed #ffb6c1;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ffc0cb;
+      animation: bounce 1.5s infinite;
+      transition: all 0.3s ease;
+    }
+
+    .kawaii-btn:hover {
+      background-color: #ffe4ec;
+      color: #ff1493;
+      box-shadow: 0 0 20px #ffb6c1;
+      transform: scale(1.05);
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="kawaii-btn" onclick="goToPage()">💖 Click Here 💖</button>
+
+  <script>
+    function goToPage() {
+      alert("Hii cutie! 🌸 Ready for surprise?");
+      window.location.href = "page2.html";
+    }
+  </script>
+
+</body>
+</html>
